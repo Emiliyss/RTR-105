@@ -6,9 +6,8 @@ int main() {
 	unsigned int sk;
 	int bin[8];
     scanf("%d", &sk);
-    z=sk;
 	for (int i = 0; i < 8; i++) {
-	if (sk%2 != 0) {bin[i]=1; sk = sk-->>1;} else {bin[i]=0;sk = sk>>1;}
+	if (sk%2 != 0) {bin[i]=1; sk = sk-->>1;} else {bin[i]=0; sk = sk>>1;}
 	printf("%d", bin[i]);
 	}
   
