@@ -3,7 +3,7 @@
 int main() {
 	printf("Ievadiet skaitli līdz 255\n ");
 	printf("Jūsu skaitļa binārais kods: ");
-	unsigned int sk,z;
+	unsigned int sk;
 	int bin[8];
     scanf("%d", &sk);
     z=sk;
