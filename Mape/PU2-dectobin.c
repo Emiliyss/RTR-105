@@ -1,6 +1,8 @@
-//Ne ļoti racionāli, bet pēc uzdevuma nosacījuma viss ir izpildīts. Nu, vismaz darbs ir godprātīgi izstrādāt, nenorakstīts no interneta. Ar funkciju ATOI iepazīstinājos internetā
+//Ne ļoti racionāli, bet pēc uzdevuma nosacījuma viss ir izpildīts. Nu, vismaz darbs ir godprātīgi izstrādāts, nenorakstīts no interneta, un viss strādā 
 //es saprotu, ka vajadzēja pildīt pavisam citādi, bet pagaidām pareizo variantu nesaprotu
 //mainīgais Z bija izveidots, lai pārrakstītu bināro kodu pareizajā virzienā, līdzi šim 1(dec) izskatījās kā 10000000(bin)
+//Ar funkciju ATOI iepazīstinājos internetā - pārveido string -> int
+//tā kā nesapratu, kā šajā uzdevumā izmantot >> << ar binārajiem skaitļiem, izmantoju kā dalīšanu ar decimālo sistēmu
 
 #include <stdio.h>
 #include <stdlib.h>
