@@ -1,81 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
-#define VAL_DEF_SIZE 16
-
-char type;
-
-char add_fact(void *val, int i)
-{
-    char cmp_res;
-
-    if (type == 'c')
-    {
-        char val_before = *((char *)val);
-        *((char *)val) *= i;
-        cmp_res = *((char *)val) > val_before;
-    }
-    else if (type == 'i')
-    {
-        int val_before = *((int *)val);
-        *((int *)val) *= i;
-        cmp_res = *((int *)val) > val_before;
-    }
-    else
-    {
-        long long val_before = *((long long *)val);
-        *((long long *)val) *= i;
-        cmp_res = *((long long *)val) > val_before;
-    }
-    
-    return cmp_res;
-}
 
 int main()
 {
-    int d;
-    printf("Please eneter number: ");
-    scanf(" %d", &d);
-
-    printf("Select data type(c - char, i - int, l - long): ");
-    scanf(" %c", &type);
-
-    if (type != 'c' && type != 'i' && type != 'l')
-    {
-        printf("Invalid data type!\n");
-        return 1;
+    int a,x=1, fakt=1, realfakt=1,k;
+    long long faktl=1, realfaktl=1;
+    char faktc=1, realfaktc=1;
+    char tips;
+    printf("Ievadiet decimalo skaitli: ");
+    scanf("%d", &a);
+    k=a;
+    printf("Izveleties datu tipu: c/i/l (char/int/long long) ");
+    scanf("%s", &tips);
+ 
+     if (tips == 'c'){
+            for (x=1; x <= k; x++) {
+            fakt=fakt*x;
+            faktc=fakt;
+           if (realfaktc>faktc){
+               printf("Faktorials no jusu skaitla nav integer robezas, maksimums ir skaitla 5 ");
+                break;}
+            realfaktc=faktc;
+            }
+            
+           printf("Faktorials: %d \n",realfaktc);
+    }
+ 
+ 
+    if (tips == 'i'){
+            for(x=1; x <= k; x++){ 
+            fakt*=x;
+            if (realfakt>fakt){
+                printf("Faktorials no jusu skaitla nav integer robezas, maksimums ir skaitla 13 ");
+                break;}
+            realfakt=fakt;
+            }
+            
+            printf("Faktorials: %d\n",realfakt);
     }
 
-    char my_val[VAL_DEF_SIZE];
-    memset(my_val, 0, VAL_DEF_SIZE);
-    my_val[0] = 1;
-    char last_res;
-
-    for (int i = 2; i <= d; i++)
-    {
-        last_res = add_fact(my_val, i);
-        if (!last_res)
-            break;
-    }
-
-    if (!last_res && d > 0)
-    {
-        printf("Choosen data type too small!\n");
-        return 1;
-    }
-
-    switch (type)
-    {
-        case 'c':
-            printf("Res: %d\n", *((char *)my_val));
-            break;
-        case 'i':
-            printf("Res: %d\n", *((int *)my_val));
-            break;
-        case 'l':
-            printf("Res: %lld\n", *((long long *)my_val));
-            break;
+    if (tips == 'l'){
+            for(x=1; x <= k; x++){ 
+            faktl*=x;
+            if (realfaktl>faktl){
+                printf("Faktorials no jusu skaitla nav integer robezas, maksimums ir skaitla 20 ");
+                break;}
+            realfaktl=faktl;
+            }
+            
+            printf("Faktorials: %lld\n",realfaktl);
     }
 
     return 0;
