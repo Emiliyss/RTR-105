@@ -1,31 +1,31 @@
 #include <stdio.h>
 
-void no_arg_no_return()
+void bez_arg_bez_return()
 {
-    printf("Function without arguments and return value\n");
+    printf("Hello World! \n");
 }
 
-void arg_no_return(int arg1, char arg2, char * arg3)
+void arg_bez_return(int a, char b)
 {
-    printf("Function with arguments but without return value\n");
+    printf("Hello World! \n");
 }
 
-int no_arg_return()
+int bez_arg_return()
 {
-    printf("Function without arguments but with return value\n");
+    printf("Hello World! \n");
     return 1;
 }
 
-int arg_return(int arg1, char arg2, char * arg3)
+int arg_return(int a, int b)
 {
-    printf("Function with arguments and return value\n");
+    printf("Hello World! \n");
     return 1;
 }
 
 int main()
 {
-    no_arg_no_return();
-    arg_no_return(1, 2, NULL);
-    no_arg_return();
-    arg_return(1, 2, NULL);
+    bez_arg_bez_return();
+    arg_bez_return(3, 5);
+    bez_arg_return();
+    arg_return(4, 6);
 }
